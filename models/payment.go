@@ -1,3 +1,4 @@
+//Package Models provee información sobre los modelos de datos que contiene el sistema
 package models
 
 import (
@@ -17,6 +18,7 @@ type Payment struct {
 	Metadata     string     `json:"metadata"`                      // metadata
 }
 
+//ValidatePostPayment valida el input correspondiente a un payment
 func ValidatePostPayment(field reflect.Value) interface{} {
 
 	if valuer, ok := field.Interface().(driver.Valuer); ok {
