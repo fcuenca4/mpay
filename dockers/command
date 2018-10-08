@@ -45,7 +45,6 @@ INSERT INTO customers VALUES (default, "Sarah", "Thompson", "kitt@acme.com");
 docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
 
-curl -H 'X-Caller-Scopes:admin' "http://internal.mercadolibre.com/payments/legacy/search?ow_payment_id=2700760809" | python -mjson.tool
 
 docker-compose -f docker-compose-mysql.yaml exec kafka /kafka/bin/kafka-console-consumer.sh \
     --bootstrap-server kafka:9092 \
